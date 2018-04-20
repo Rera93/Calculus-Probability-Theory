@@ -2,8 +2,9 @@
   \usepackage[utf8]{inputenc}
   \usepackage{amsmath}
   
-  \title{Calculus & Probability theory}
-  \author{brigelpineti }
+  \title{\Large{Calculus $&$ Probability theory} \\
+  \huge{Assignment 1}}
+  \author{Brigel Pineti }
   \date{April 2018}
   
   \begin{document}
@@ -15,18 +16,28 @@
   \textbf{b)} We have (1-$x^2$) $>$ 0 =$>$ $\vert$ x $\vert$ $<$ 1 meaning that x $\in$ (-1, 1). \\ 
   Thus by resulting on 4 cases: \\
   1) x $<$ -1 =$>$ x $<$ 0, (1-$x^2$) $<$ 0, thus f(x) $>$ 0 \\
-  2) x \in (-1, 0) => x < 0, (1-$x^2$) $>$ 0, thus f(x) $<$ 0 \\
-  3) x \in (0, 1) => x > 0, (1-$x^2$) $>$ 0, thus f(x) $>$ 0 \\
+  2) x $\in$ (-1, 0) =$>$ x $<$ 0, (1-$x^2$) $>$ 0, thus f(x) $<$ 0 \\
+  3) x $\in$ (0, 1) =$>$ x $>$ 0, (1-$x^2$) $>$ 0, thus f(x) $>$ 0 \\
   4) x $>$ 1 =$>$ x $>$ 0, (1-$x^2$) $<$ 0, thus f(x) $<$ 0
   
   
   \section*{Exercise 7}
   
-  3 cases are to distinguished considering the values of \textit{a} and \textit{b} \\
-  1) a == b then y = \{a\} \\
-  2) a $>$ b then (b-a) $<$ 0 \\
-  3) a $<$ b then (b-a) $>$ 0. Keeping in mind that x $\in$ $(0,1)$ $ $ then $ $ y = a + (b-a)x $>$ a and y = a + (b-a)x $<$ a + (b-a) = b.\\ \\
-  Therefore, y will take values in (a,b) \\ 
+  3 cases are to be distinguished considering the values of \textit{a} and \textit{b}: \\ \\
+  \textbf{1)} a == b then y = \{a\} \\ \\
+  \textbf{2)} a $>$ b then (b-a) $<$ 0. Keeping in mind that x $\in$ (0,1) then y = a + (b-a)x $<$ a and y = a + (b-a)x $>$ a + (b-a) = b. \\
+  Therefore, y will take values in (b,a). The question to be answered now is if y does reach every value in this interval \\ 
+  \begin{center}
+      x_u = $\dfrac{u - a}{b - a}$
+  \end{center}
+  Assume that u is part of the interval (a,b). This means that $x_u$ falls in (0,1). To rephrase, $\exists$ $x_u$ $\in$ (0,1) $\mid$ v = a + (b-a)$x_u$. Thus, y will run throughout all the values in (b,a).\\ \\
+  \textbf{3)} a $<$ b then (b-a) $>$ 0. Keeping in mind that x $\in$ (0,1) then y = a + (b-a)x $>$ a and y = a + (b-a)x $<$ a + (b-a) = b.\\
+  Therefore, y will take values in (a,b). The question to be answered now is if y does reach every value in this interval \\ 
+  \begin{center}
+      x_v = $\dfrac{v - a}{b - a}$
+  \end{center}
+  Assume that v is part of the interval (a,b). This means that $x_v$ falls in (0,1). To rephrase, $\exists$ $x_v$ $\in$ (0,1) $\mid$ v = a + (b-a)$x_v$. Thus, y will run throughout all the values in (a,b).
+  
   
   \section*{Exercise 8}
   
@@ -38,7 +49,7 @@
   Since f(-x) $\neq$ -f(x) then the function is \textbf{not odd}.
   
   \section*{Exercise 9}
-  \textbf{a)} To find the domain, the expression inside the square root needs to be greater or equal to zero. Therefore, 7 - $x^2$ $\geq$ 0. In order for the former mentioned condition to be true, -$\sqrt{7}$ $\leq$ x $\leq$ $\sqrt{7}$. \\
+  \textbf{a)} To find the domain, the expression inside the square root needs to be greater or equal to zero. Therefore, 7 - $x^2$ $\geq$ 0. In order for the former mentioned condition to be true, x has to fall inside this range: -$\sqrt{7}$ $\leq$ x $\leq$ $\sqrt{7}$. \\
   So, \textbf{D(f) = [-$\sqrt{7}$, $\sqrt{7}$]}. \\ \\ 
   Knowing the values of x allowed for the expression inside the square root, it is possible to determine the values y may take =$>$ 0 $\leq$ $\sqrt{7 - x^2}$ $\leq$ $\sqrt{7}$. In f(x) the only difference is right part where \textit{+1} is added leading to 0\textbf{+1} $\leq$ $\sqrt{7 - x^2}$ $\leq$ $\sqrt{7} \textbf{+1}$. In order words, \textbf{R(f) = [1, $\sqrt{7}$ + 1]}. \\ \\
   \textbf{b)} Since in a division operation the denominator needs to be $\neq$ 0 then \\ \textbf{D(f) = R \textbackslash \{0\}}. Additionally, the absolute value will guarantee that f(x) will always evaluate to a positive value without caring about the cases when x is positive or negative. Hence, \textbf{R(f) = (0, +$\infty$)}.
@@ -50,7 +61,7 @@
   $>$ x(yc - a) = b - yd \{computer for x\} \\
   $>$ x = $\dfrac{b-yd}{yc-a}$ \\ \\
   Therefore, the inverse function is given by g(x) = $\dfrac{b-xd}{xc-a}$ \\ \\
-  \textbf{b)} When d = -a then \textit{g} is equal to \textit{f}. To be noted is that g is defined for all \textit{x} besides x = $\dfrac{a}{c}$. f(x) being equal to $\dfrac{a}{c}$ means that ad = bd = 0, thus by saying that g is defined for the whole range of f.
+  \textbf{b)} When d = -a then \textit{g} is equal to \textit{f}. To be noted is that g is defined for all \textit{x} besides x = $\dfrac{a}{c}$. f(x) being equal to $\dfrac{a}{c}$ means that ad - bd = 0, thus by saying that g is defined for the whole range of f.
    
   
   \section*{Exercise 11}
