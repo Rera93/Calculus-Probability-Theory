@@ -1,250 +1,41 @@
-%
-% Although we try to provide a template that completely
-% matches the corresponding assignment, we do expect you
-% to check that you have indeed answered all questions.
-%
-
-% ALSO VERY IMPORTANT:
-% This is just a template to help you with the LaTeX part of the assignment.
-% So you may change it completely according to your own wishes!
-%
-
-\documentclass[a4paper]{article}
-  % Typically the 'article' class is appropriate for assignments.
-  % And we print it on a4, so we include that as well.
+\documentclass{article}
+  \usepackage[utf8]{inputenc}
   
-  \usepackage{a4wide}
-  % To decrease the margins and allow more text on a page.
+  \title{Calculus & Probability theory}
+  \author{brigelpineti }
+  \date{April 2018}
   
-  \usepackage{graphicx}
-  % To deal with including pictures.
-  
-  \usepackage{enumerate}
-  % To provide a little bit more functionality than with LaTeX's default
-  % enumerate environment.
-  
-  \usepackage{array} 
-  % To provide a little bit more functionality than with LaTeX's default
-  % array environment.
-  
-  \usepackage[american]{babel}
-  % Use this if you want to write the document in US English. It takes care of
-  % (usually) proper hyphenation.
-  % If you want to write your answers in Dutch, please replace 'american'
-  % by 'dutch'.
-  % Note that after a change it may be that the first compilation of LaTeX
-  % fails. That is normal and caused by the fact that in auxiliary files
-  % from previous runs, there may still be a \selectlanguage{american}
-  % around, which is invalid if 'american' is not incorporated with babel.
-  
-  \usepackage{amssymb}
-  % This package loads mathematical things like the fonts for the blackboard
-  % bold for the set of natural numbers.
-  
-  \usepackage{amsmath}
-  \usepackage{clipboard}
-  
-  \newcommand{\exercise}[2]{\subsection*{Exercise #1}{#2}}
-  \newcommand{\exerciseenum}[2]{\subsection*{Exercise #1}{\begin{enumerate}[a)]#2\end{enumerate}}}
-  % We defined our own commands to make it easy to present all the
-  % exercises in the same style. The first one does not automatically
-  % start an 'enumerate' list, the second one does.
-  % The [2] means that our command needs two arguments.
-  % The #1 and the #2 indicate where we use these arguments in the
-  % command.
-  % There are several ways to have automatic numbering for the exercises,
-  % but here we have chosen to use a subsection for this and use manual
-  % numbering. This is because maybe not everyone will be able to do hand in
-  % all exercises.
-  % Note that we add the '*' to make sure that the subsection is not numbered.
-  % (Since we don't have a \section, the numbers for a subsection would be
-  % ugly like 0.1, 0.2 et cetera.
-  % The environment 'enumerate' automatically numbers the items in this list.
-  % The optional [a)] makes sure that the list will be like a), b), c) et cetera.
-  
-  
-  \newcommand{\set}[1]{\ensuremath{\left\{{#1}\right\}}}
-  % This command puts curly braces around its argument, so it becomes
-  % a set. The \left and \right make sure that the braces grow in size
-  % if the contents of the set are large symbols.
-  
-  \newcommand{\setbuild}[2]{\ensuremath{\set{{#1}\mid{#2}}}}
-  % We also introduce a shortcut for using the set builder notation.
-  % Do you understand what it does?
-  
-  % And the next series of commands gives you some of the default sets
-  % that were in the slides.
-  \newcommand{\TT}{\ensuremath{\mathbb{T}}}
-  \newcommand{\FF}{\ensuremath{\mathbb{F}}}
-  \newcommand{\NN}{\ensuremath{\mathbb{N}}}
-  \newcommand{\NNp}{\ensuremath{\mathbb{N}^{+}}}
-  \newcommand{\ZZ}{\ensuremath{\mathbb{Z}}}
-  \newcommand{\ZZp}{\ensuremath{\mathbb{Z}^{+}}}
-  \newcommand{\QQ}{\ensuremath{\mathbb{Q}}}
-  \newcommand{\QQp}{\ensuremath{\mathbb{Q}^{+}}}
-  \newcommand{\RR}{\ensuremath{\mathbb{R}}}
-  \newcommand{\RRp}{\ensuremath{\mathbb{R}^{+}}}
-  \newcommand{\CC}{\ensuremath{\mathbb{C}}}
-  
-  % An the next command gives a shorthand for the power set of a given set.
-  \newcommand{\power}[1]{\ensuremath{{\cal P}\left({#1}\right)}}
-  
-  \newcommand{\sol}[1]{\underline{\underline{#1}}}
-  
-  
-  \title{Calculus and Probability\\Assignment 1}
-  
-  % Replace the placeholders by your real name, student number and 
-  % group (for the exercise hours)
-  \author{
-  \global\Copy{name}{
-   Brigel Pineti  % Fill in your name
-  } \\ 
-  \global\Copy{snumber}{
-  s1005549  % Fill in your student number
-  } }
-  
-  % In LaTeX everything before \begin{document} is called pre-amble.
-  % This is where you put all important settings. The real document
-  % starts after \begin{document}.
   \begin{document}
-  \maketitle 
-  % \maketitle makes sure that the title is shown on the first page of
-  % the document.
+  \maketitle
+  \section*{Exercise 6}
+  \begin{itemize}
   
+  \item a) x - $x^3$ = x(1-$x^2$) = x(1+x)(1-x) then we have x \in \{-1, 0, 1\} 
   
-  % Now we use the command we defined earlier and give it the proper two
-  % parameters.
-  % Because the second parameter is long, we put a % directly after the
-  % opening curly brace {. This is not needed but makes the source file
-  % look a bit better.
-  
-  %\newpage
-  
-  % #####################################################################################
-  %
-  % Exercises are below. They consist of a calculation part and a solution part. The solution
-  % part is automatically copied to the last page for correcting by the student asisstents.
-  % This is somewhat experimental.... If it doesn't work, copy-paste by hand. 
-  %
-  % #####################################################################################
-  
-  \exerciseenum{6}{% 
-  \item x - $x^3$ = x(1-$x^2$) = x(1+x)(1-x) then we have x \in \{-1, 0, 1\} \\
-  \global\Copy{exzesa}{
-  % Put here the final answer, which is then also copied to the form on the last page
-  }
-  
-  \item we have (1-$x^2$) $>$ 0 =$>$ $\vert$ x $\vert$ $<$ 1 meaning that x \in (-1, 1). \\ 
+  \item b) we have (1-$x^2$) $>$ 0 =$>$ $\vert$ x $\vert$ $<$ 1 meaning that x \in (-1, 1). \\ 
   $Thus by resulting on 4 cases:$ \\
   1) x < -1 => x < 0, (1-$x^2$) $<$ 0, thus f(x) $>$ 0 \\
   2) x \in (-1, 0) => x < 0, (1-$x^2$) $>$ 0, thus f(x) $<$ 0 \\
   3) x \in (0, 1) => x > 0, (1-$x^2$) $>$ 0, thus f(x) $>$ 0 \\
   4) x $>$ 1 =$>$ x $>$ 0, (1-$x^2$) $<$ 0, thus f(x) $<$ 0
+  \end{itemize}
   
-  \global\Copy{exzesb}{
-    % Put here the final answer
-  }
+  \section*{Exercise 7}
   
-  }
+  3 cases are to distinguished considering the values of \textit{a} and \textit{b} \\
+  1) a == b then y = \{a\} \\
+  2) a $>$ b then (b-a) $<$ 0 \\
+  3) a $<$ b then (b-a) $>$ 0. Keeping in mind that x \in $(0,1)$ $ $ then $ $ y = a + (b-a)x > a and y = a + (b-a)x < a + (b-a) = b.  $ $\\ \\
+  $ $ Therefore, y $ $ will $ $ take $ $ values $ $ in $ $ (a,b) \\ 
   
-  \exercise{7}{%
-  \dots  % Put here your calculation
-  \global\Copy{exzeven}{
-   \dots % Put here the final answer
-  }
-  }
+  \section*{Exercise 8}
   
-  \exerciseenum{8}{%
-  \item%a
-  \dots  % Put here your calculation
-  \global\Copy{exachta}{
-   \dots % Put here the final answer
-  }
-  \item%b
-  \dots  % Put here your calculation
-  \global\Copy{exachtb}{
-   \dots % Put here the final answer
-  }
-  }
-  
-  \exerciseenum{9}{%
-  \item%a
-  \dots  % Put here your calculation
-  \global\Copy{exnegena}{
-   \dots % Put here the final answer
-  }
-  \item%b
-  \dots  % Put here your calculation
-  \global\Copy{exnegenb}{
-   \dots % Put here the final answer
-  }
-  }
-  
-  \exerciseenum{10}{%
-  \item%a
-  \dots  % Put here your calculation
-  \global\Copy{extiena}{
-   \dots % Put here the final answer
-  }
-  \item%b
-  \dots  % Put here your calculation
-  \global\Copy{extienb}{
-   \dots % Put here the final answer
-  }
-  }
-  
-  \exerciseenum{11}{%
-  \item%a
-  \dots  % Put here your calculation
-  \global\Copy{exelfa}{
-   \dots % Put here the final answer
-  }
-  \item%b
-  \dots  % Put here your calculation
-  \global\Copy{exelfb}{
-   \dots % Put here the final answer
-  }
-  }
-  
-  
-  % If everything works correctly the page below is filled in automatically. If not, do some 
-  % copy-paste by hand. 
-  
-  \newpage
-  \section*{Answer Form Assignment 1}
-  
-  \noindent
-  \large
-  \begin{tabular}{|p{4cm}|p{11.5cm}|}
-  \hline
-  \textbf{Name} & \Paste{name} \\ \hline
-  \textbf{Student Number} & \Paste{snumber} \\ \hline
-  \end{tabular}
-  
-  \vspace{0.5cm}
-  \noindent
-  \large
-  %\begin{tabular}{|m{2.5cm}|m{13cm}|}
-  \begin{tabular}{|m{1cm}@{}m{1.5cm}|p{13cm}|}
-  \hline
-    \textbf{Question} && \textbf{Answer} \\
-  \hline
-  6a & (1pt) & \Paste{exzesa} \\  \hline
-  6b & (1pt) & \Paste{exzesb} \\  \hline
-  7  & (1pt) &  \Paste{exzeven} \\ \hline
-  8a & (0.5pt) & \Paste{exachta} \\ \hline
-  8b & (0.5pt) & \Paste{exachtb} \\ \hline
-  9a & (1pt) &  \Paste{exnegena} \\ \hline 
-  9b & (1pt) &  \Paste{exnegenb} \\ \hline
-  10a& (1pt) &  \Paste{extiena} \\ \hline
-  10b& (1pt) &   \Paste{extienb} \\ \hline
-  11a& (1pt) &   \Paste{exelfa} \\ \hline
-  11b& (1pt) &   \Paste{exelfb} \\ \hline
-  \end{tabular}
-  
-  
+  \textbf{a)} f(-x) = 3(-x) - $(-x)^3$ = -3x + $x^3$ and -f(x) = -3x + $x^3$ \\
+  Since f(-x) $\neq$ f(x) then the function is \textbf{not even}. \\
+  Since f(-x) $\eq$ -f(x) then the function is \textbf{odd}. \\ \\
+  \textbf{b)} f(-x) = $\sqrt[3]{(1+x)^2}$ + $\sqrt[3]{(1-x)^2}$ and -f(x) = - $\sqrt[3]{(1-x)^2}$ - $\sqrt[3]{(1+x)^2}$ \\
+  Since f(-x) $\eq$ f(x) then the function is \textbf{even}. \\
+  Since f(-x) $\neq$ -f(x) then the function is \textbf{not odd}. 
   
   \end{document}
-  
   
